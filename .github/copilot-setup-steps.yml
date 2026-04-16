@@ -1,0 +1,6 @@
+name: "Copilot Setup"
+steps:
+  - name: Install dependencies
+    run: pip install -r requirements.txt
+  - name: Verify setup
+    run: pytest --co -q
