@@ -1,5 +1,5 @@
-from flask import Flask
-from models import db
+from flask import Flask, jsonify
+from models import db, Task
 
 
 def create_app():
@@ -13,6 +13,11 @@ def create_app():
     @app.route("/health")
     def health():
         return {"status": "ok"}
+
+    @app.route("/tasks")
+    def get_tasks():
+        tasks = Task.query.all()
+        return jsonify([task.to_dict() for task in tasks])
 
     return app
 
