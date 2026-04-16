@@ -5,9 +5,7 @@ from models import db, Task
 
 @pytest.fixture
 def client():
-    app = create_app()
-    app.config["TESTING"] = True
-    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///:memory:"
+    app = create_app({"TESTING": True, "SQLALCHEMY_DATABASE_URI": "sqlite:///:memory:"})
     with app.test_client() as client:
         yield client
 

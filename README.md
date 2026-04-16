@@ -17,6 +17,7 @@ The API runs at `http://localhost:5000`.
 |--------|------|-------------|
 | GET | `/health` | Health check |
 | GET | `/tasks` | List all tasks |
+| POST | `/tasks` | Create a new task |
 
 ## Running Tests
 
