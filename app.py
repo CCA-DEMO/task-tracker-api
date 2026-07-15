@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, render_template, request
 from models import db, Task
 
 
@@ -11,6 +11,10 @@ def create_app(config=None):
 
     with app.app_context():
         db.create_all()
+
+    @app.route("/")
+    def index():
+        return render_template("index.html")
 
     @app.route("/health")
     def health():

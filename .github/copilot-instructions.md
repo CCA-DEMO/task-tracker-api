@@ -42,6 +42,14 @@ When adding a new endpoint:
 - Use `datetime.now(timezone.utc)` for timestamps
 - The `Task` model has: id, title, description, status, created_at
 
+## Browser / E2E Tests
+
+- Browser tests for the web UI live in `tests/e2e/` and use **pytest-playwright**.
+- The web UI is served at `/` from `templates/index.html`.
+- E2E deps go in `requirements-e2e.txt` (NOT `requirements.txt`).
+- Prefer role/label locators; fall back to `data-testid` hooks in the template.
+- This work is owned by the `ui-tester` agent (`.github/agents/ui-tester.md`).
+
 ## Do NOT
 
 - Add blueprints — keep routes in `app.py` for now

@@ -1,0 +1,29 @@
+name: UI Test Request
+description: Ask the ui-tester agent to add or update browser tests for a web UI flow.
+title: "[ui-test]: "
+labels: ["ui-test"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Assign this issue to **Copilot** to have the `ui-tester` agent add
+        Playwright browser tests in `tests/e2e/`.
+  - type: textarea
+    id: flow
+    attributes:
+      label: User flow to cover
+      description: Describe the UI flow that needs browser test coverage.
+      placeholder: "As a user, when I add a task with a title, it appears in the task list."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: What must the browser tests assert? List the specific expectations.
+      placeholder: |
+        - Empty state is shown when there are no tasks
+        - Submitting a title adds the task to the list
+        - Submitting with no title is rejected
+    validations:
+      required: true
