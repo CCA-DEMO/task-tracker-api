@@ -13,9 +13,14 @@ suitability for Copilot coding agent, then posts a structured advisory comment.
 | Agentic workflow source | `CCA-DEMO/task-tracker-api` | `.github/workflows/backlog-assessment.md` |
 | Compiled Actions workflow | `CCA-DEMO/task-tracker-api` | `.github/workflows/backlog-assessment.lock.yml` |
 
-The workflow uses the organization-level `backlog-assessor` agent through
-`engine.agent`. Merge that agent into `.github-private` before running the
-workflow.
+The workflow imports the organization-level `backlog-assessor` instructions from
+`.github-private`. Compilation resolves `main` to a commit and caches the prompt
+under `.github/aw/imports/`, so runs are reproducible.
+
+The Copilot CLI used by `gh aw` discovers repository-local agents but does not
+currently discover organization agents from `.github-private` through
+`engine.agent`. The import reuses the same organization-owned instructions
+without relying on runtime agent discovery.
 
 ## Authentication
 

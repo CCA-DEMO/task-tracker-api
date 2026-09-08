@@ -16,8 +16,10 @@ permissions:
 
 engine:
   id: copilot
-  agent: backlog-assessor
   model: copilot/gpt-5.4
+
+imports:
+  - CCA-DEMO/.github-private/agents/backlog-assessor.agent.md@main
 
 tools:
   bash: []
