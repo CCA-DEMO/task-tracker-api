@@ -17,6 +17,7 @@ permissions:
 engine:
   id: copilot
   agent: backlog-assessor
+  model: gpt-5.4
 
 tools:
   bash: []
