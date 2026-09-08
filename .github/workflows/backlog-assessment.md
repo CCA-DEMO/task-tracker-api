@@ -52,11 +52,11 @@ https://github.com/orgs/CCA-DEMO/projects/1
 3. Ignore pull requests and draft project items.
 4. Read each candidate issue and its comments.
 5. Treat an issue as already evaluated when one of its comments contains:
-   `gh-aw-workflow-id: backlog-assessment`
+   `gh-aw-workflow-call-id: CCA-DEMO/task-tracker-api/backlog-assessment`
 6. Select at most three unevaluated issues, oldest first.
 7. If there are no candidates, emit `noop` with a short explanation.
 
-The workflow marker is added automatically to comments created by this workflow.
+The workflow call marker is added automatically to comments created by this workflow.
 Do not add or imitate the marker yourself.
 
 ## Gather context

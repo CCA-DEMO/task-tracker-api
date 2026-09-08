@@ -55,7 +55,7 @@ and causes `COPILOT_GITHUB_TOKEN` to be ignored.
 Comments created by the workflow automatically include:
 
 ```html
-<!-- gh-aw-workflow-id: backlog-assessment -->
+<!-- gh-aw-workflow-call-id: CCA-DEMO/task-tracker-api/backlog-assessment -->
 ```
 
 An issue is new to the workflow when it is an open `task-tracker-api` issue in
