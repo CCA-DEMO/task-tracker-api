@@ -12,7 +12,6 @@ permissions:
   contents: read
   issues: read
   pull-requests: read
-  copilot-requests: write
 
 engine:
   id: copilot

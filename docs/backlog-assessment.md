@@ -38,8 +38,17 @@ Store it as a repository secret:
 gh aw secrets set GH_AW_READ_PROJECT_TOKEN --value "<token>"
 ```
 
-The workflow uses organization-billed Copilot requests through
-`copilot-requests: write`.
+Copilot inference requires a separate user-owned fine-grained PAT with the
+account permission `Copilot Requests: Read`. The token owner must have an active
+Copilot license. Store it as:
+
+```bash
+gh aw secrets set COPILOT_GITHUB_TOKEN --value "<token>"
+```
+
+Do not add `copilot-requests: write` to this workflow unless centralized Copilot
+billing is enabled for the organization. That permission takes precedence over
+and causes `COPILOT_GITHUB_TOKEN` to be ignored.
 
 ## Candidate tracking
 
