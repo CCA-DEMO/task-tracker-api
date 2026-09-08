@@ -44,3 +44,9 @@ pytest tests/e2e -v
 These are maintained by the repo-centric `ui-tester` agent. See
 [`docs/ui-testing-agent.md`](docs/ui-testing-agent.md) for how the agent, CI, and
 project board fit together.
+
+## Agentic Backlog Assessment
+
+The `backlog-assessment` GitHub Agentic Workflow reviews previously unevaluated
+issues from the product backlog and posts structured readiness assessments. See
+[`docs/backlog-assessment.md`](docs/backlog-assessment.md) for setup and usage.
